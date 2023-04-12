@@ -77,13 +77,13 @@ public class SubjectServiceImpl implements SubjectService {
                         subjectWrapperDto.setAdditionalHeaderDto(additionalHeaderDto);
                     }
                 }else {
-                    additionalHeaderDto.setMessage(Constants.INPUT_NOT_GIVEN_SUBJECT_NAME);
+                    additionalHeaderDto.setMessage(Constants.INPUT_ALREADY_GIVEN_SUBJECT_NAME);
                     additionalHeaderDto.setMessageLevel(MessageLevel.ERROR.toString());
                     additionalHeaderDto.setHttpStatus(HttpStatus.BAD_REQUEST.statusCode());
                     subjectWrapperDto.setAdditionalHeaderDto(additionalHeaderDto);
                 }
             }else {//Throw the exception
-                additionalHeaderDto.setMessage(Constants.INPUT_NOT_GIVEN_SUBJECT_CODE);
+                additionalHeaderDto.setMessage(Constants.INPUT_ALREADY_GIVEN_SUBJECT_CODE);
                 additionalHeaderDto.setMessageLevel(MessageLevel.ERROR.toString());
                 additionalHeaderDto.setHttpStatus(HttpStatus.BAD_REQUEST.statusCode());
                 subjectWrapperDto.setAdditionalHeaderDto(additionalHeaderDto);
