@@ -1,8 +1,10 @@
 package com.spangles.orgdepartmentmanagement.util;
 
 import com.spangles.orgdepartmentmanagement.dto.DepartmentDto;
+import com.spangles.orgdepartmentmanagement.dto.SemesterDto;
 import com.spangles.orgdepartmentmanagement.dto.SubjectDto;
 import com.spangles.orgdepartmentmanagement.entity.Department;
+import com.spangles.orgdepartmentmanagement.entity.Semester;
 import com.spangles.orgdepartmentmanagement.entity.Subject;
 
 import java.io.Serializable;
@@ -54,5 +56,27 @@ public class DepartmentUtil implements Serializable {
         department.setHeadOfTheDepartment(departmentDto.getHeadOfTheDepartment());
 
         return department;
+    }
+    public SemesterDto convertingEntityToDto(Semester semester){
+        SemesterDto semesterDto = new SemesterDto();
+
+        semesterDto.setSemesterId(semester.getSemesterId());
+        semesterDto.setSemesterCode(semester.getSemesterCode());
+        semesterDto.setSemesterName(semester.getSemesterName());
+        semesterDto.setDepartmentId(semester.getDepartmentId());
+        semesterDto.setSemesterYear(semester.getSemesterYear());
+
+        return semesterDto;
+    }
+    public Semester convertingDtoToEntity(SemesterDto semesterDto){
+        Semester semester = new Semester();
+
+        semester.setSemesterId(semesterDto.getSemesterId());
+        semester.setSemesterCode(semesterDto.getSemesterCode());
+        semester.setSemesterName(semesterDto.getSemesterName());
+        semester.setDepartmentId(semesterDto.getDepartmentId());
+        semester.setSemesterYear(semesterDto.getSemesterYear());
+
+        return semester;
     }
 }
