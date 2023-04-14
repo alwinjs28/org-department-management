@@ -110,11 +110,17 @@ public class DepartmentServiceImpl implements DepartmentService {
 
     @Override
     public DepartmentDto updateDepartment(DepartmentDto departmentDto) {
-        return null;
+        DepartmentUtil departmentUtil = new DepartmentUtil();
+        Department department = departmentUtil.convertingDtoToEntity(departmentDto);
+        Department departmentEntity = departmentRepository.save(department);
+        DepartmentDto departmentDtoResponse = departmentUtil.convertingEntityToDto(departmentEntity);
+        return departmentDtoResponse;
     }
 
     @Override
     public void deleteDepartment(DepartmentDto departmentDto) {
-
+        DepartmentUtil departmentUtil = new DepartmentUtil();
+        Department department = departmentUtil.convertingDtoToEntity(departmentDto);
+        departmentRepository.delete(department);
     }
 }

@@ -13,4 +13,9 @@ public interface Constants {
     public static final String STAFF_QUERY = "?staff_id=";
     public static final String STAFF_ID = "StaffId : ";
     public static final String INPUT_STAFF_ID_NOT_VALID = "StaffId Is Not Valid";
+    public static final String INPUT_IS_ALREADY_GIVEN_SEMESTER_CODE = "Semester Code Is Already Having";
+    public static final String INPUT_IS_ALREADY_GIVEN_SEMESTER_NAME = "Semester Name Is Already Having";
+    public static final String INPUT_IS_NOT_FOUND_IN_DEPARTMENT = "DepartmentId Is Not Found";
+    public static final String NUMBER_OF_YEAR_LIMIT = "Year Is Above Are Below From THe Limit :";
+    public static final String DEPARTMENT_ID = "DepartmentId : ";
 }
