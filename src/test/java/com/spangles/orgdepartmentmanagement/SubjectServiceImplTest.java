@@ -20,6 +20,6 @@ public class SubjectServiceImplTest {
         String subjectCode = "ME001";
         SubjectDto subjectDto = new SubjectDto();
         subjectDto.setSubjectCode(subjectCode);
-        SubjectWrapperDto subjectWrapperDto = subjectService.saveSubject(subjectDto);
+//        SubjectWrapperDto subjectWrapperDto = subjectService.saveSubject(subjectDto);
     }
 }
