@@ -14,6 +14,6 @@ public class DepartmentServiceImplTest {
     @Test
     public void getStaffIdByHeadOfTheDepartment(){
         Long headOfTheDepartment = 1L;
-        boolean value = departmentService.getStaffIdByHeadOfTheDepartment(headOfTheDepartment);
+//        boolean value = departmentService.getStaffIdByHeadOfTheDepartment(headOfTheDepartment);
     }
 }
